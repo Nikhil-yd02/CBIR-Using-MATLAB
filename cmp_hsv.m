@@ -1,8 +1,8 @@
 clear;
 clc;
 
-%Enter the path of the folder:
-image_folder = 'C:\Users\NIKHIL YADAV\Desktop\MATLAB techno Lv_1\BBT';
+%Enter the path of the folder from which you want to search for similar images:
+image_folder = 'C:\Users\NIKHIL YADAV\Desktop\CBIR\Sample_images';
 
 %read all images with specific extention(e.g.-jpg/jpeg etc):
 filenames = dir(fullfile(image_folder,'*.jpg'));
@@ -61,6 +61,7 @@ for i = 1:total_images
     fv = sum(sqrt(hnv1-hnv2).^2);
     
     %Display of output images: 
+    %Use comparsion values according to your requirements:
     if (abs(fh) <= 9.0000e-17 ) && (abs(fh) >= 0)&&(abs(fs) <= 7.0000e-17 ) && (abs(fs) >= 0)&&(abs(fv) <= 7.0000e-17 ) && (abs(fv) >= 0)
         figure;
         imshow(dim{i});
