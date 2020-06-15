@@ -20,9 +20,6 @@ for i =1:total_images
     dim{i} = our_images;
 end
 
-%display all dataset images:
-figure;
-montage(dim());
 
 for i = 1:total_images
     %query image:
